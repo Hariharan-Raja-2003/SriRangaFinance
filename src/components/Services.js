@@ -47,12 +47,12 @@ function Services() {
     {
       title: "Daily Business Loan",
       img: dailyloan,
-      text: "Daily business loans help with short-term financial needs like inventory or cash flow, with daily repayments suitable for businesses with regular income.",
+      text: "Daily business loans help with short-term financial needs like inventory or cash flow, with daily repayments suitable for businesses with regular income without any finacial fear.",
     },
     {
       title: "Weekly Business Loan",
       img: weeklyloan,
-      text: "Weekly business loans provide capital for small businesses with easy weekly repayments and support urgent business needs.",
+      text: "Weekly business loans provide capital for small businesses with easy weekly repayments and support urgent business needs.Support for financial freedom.",
     },
   ];
 
