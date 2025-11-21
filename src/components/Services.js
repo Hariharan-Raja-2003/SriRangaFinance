@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import Card from "./Card";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 import chitfund from "../Autionchitfund.png";
 import property from "../Property.png";
 import dailyloan from "../dailyloan.png";
@@ -23,17 +24,11 @@ function Services() {
     responsive: [
       {
         breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
+        settings: { slidesToShow: 2 },
       },
       {
         breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
+        settings: { slidesToShow: 1 },
       },
     ],
   };
@@ -42,24 +37,22 @@ function Services() {
     {
       title: "Auction Chit Fund",
       img: chitfund,
-      text: "An auction chit fund is a savings system where members contribute monthly and the total amount is auctioned. The person who bids the lowest amount receives the chit, and the remaining money is shared as a dividend among all members. It helps people save regularly while offering quick access to funds.",
+      text: "An auction chit fund is a savings system where members contribute monthly and bid to receive the pooled amount. It helps with savings and quick access to funds.",
     },
-  
     {
       title: "Property Loan",
       img: property,
-      text:"A property loan provides financial support for purchasing or constructing a home, land, or commercial space. It offers flexible repayment options and competitive interest rates. Borrowers can use their property as collateral to access higher loan amounts, making it a reliable option for achieving real estate goals.",
+      text: "A property loan allows individuals to buy or construct homes, land, or commercial spaces with flexible repayment options using property as collateral.",
     },
     {
       title: "Daily Business Loan",
       img: dailyloan,
-      text: "A daily business loan provides short-term funding to support everyday business needs such as inventory, cash flow, or operational expenses. Repayments are made daily, making it suitable for businesses with regular income. It helps small businesses manage financial gaps and manage business comitements.",
+      text: "Daily business loans help with short-term financial needs like inventory or cash flow, with daily repayments suitable for businesses with regular income.",
     },
-
     {
       title: "Weekly Business Loan",
       img: weeklyloan,
-      text: "A weekly business loan provides short-term funding with repayments made every week, making it ideal for businesses with weekly income. It helps manage cash flow and handle urgent financial needs. This loan supports small businesses by offering quick access to capital without long-term financial pressure.",
+      text: "Weekly business loans provide capital for small businesses with easy weekly repayments and support urgent business needs.",
     },
   ];
 
@@ -71,32 +64,22 @@ function Services() {
           Comprehensive financial solutions tailored to your needs
         </p>
       </div>
+
       <div className="card-cover">
         <Slider ref={sliderRef} {...settings}>
           {services.map((service, index) => (
             <div key={index} className="service-slide">
-              <Card
-                title={service.title}
-                img={service.img}
-                text={service.text}
-              />
+              <Card title={service.title} img={service.img} text={service.text} />
             </div>
           ))}
         </Slider>
       </div>
+
       <div className="carousel-controls">
-        <button
-          className="carousel-btn prev"
-          onClick={() => sliderRef.current?.slickPrev()}
-          aria-label="Previous"
-        >
+        <button className="carousel-btn prev" onClick={() => sliderRef.current?.slickPrev()}>
           ‹
         </button>
-        <button
-          className="carousel-btn next"
-          onClick={() => sliderRef.current?.slickNext()}
-          aria-label="Next"
-        >
+        <button className="carousel-btn next" onClick={() => sliderRef.current?.slickNext()}>
           ›
         </button>
       </div>
