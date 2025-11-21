@@ -14,23 +14,30 @@ function Services() {
 
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    pauseOnHover: true,
+    autoplay: false,
+
     responsive: [
       {
-        breakpoint: 992,
-        settings: { slidesToShow: 2 },
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
       },
       {
         breakpoint: 768,
-        settings: { slidesToShow: 1 },
-      },
-    ],
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,        // Fixes mobile layout
+          centerPadding: "20px"    // Adds space so card is not cut
+        }
+      }
+    ]
   };
 
   const services = [
@@ -47,12 +54,12 @@ function Services() {
     {
       title: "Daily Business Loan",
       img: dailyloan,
-      text: "Daily business loans help with short-term financial needs like inventory or cash flow, with daily repayments suitable for businesses with regular income without any finacial fear.",
+      text: "Daily business loans help with short-term financial needs like inventory or cash flow, with daily repayments suitable for businesses with regular income.",
     },
     {
       title: "Weekly Business Loan",
       img: weeklyloan,
-      text: "Weekly business loans provide capital for small businesses with easy weekly repayments and support urgent business needs.Support for financial freedom.",
+      text: "Weekly business loans provide capital for small businesses with easy weekly repayments and support urgent financial needs.",
     },
   ];
 
@@ -69,17 +76,27 @@ function Services() {
         <Slider ref={sliderRef} {...settings}>
           {services.map((service, index) => (
             <div key={index} className="service-slide">
-              <Card title={service.title} img={service.img} text={service.text} />
+              <Card
+                title={service.title}
+                img={service.img}
+                text={service.text}
+              />
             </div>
           ))}
         </Slider>
       </div>
 
       <div className="carousel-controls">
-        <button className="carousel-btn prev" onClick={() => sliderRef.current?.slickPrev()}>
+        <button
+          className="carousel-btn prev"
+          onClick={() => sliderRef.current?.slickPrev()}
+        >
           ‹
         </button>
-        <button className="carousel-btn next" onClick={() => sliderRef.current?.slickNext()}>
+        <button
+          className="carousel-btn next"
+          onClick={() => sliderRef.current?.slickNext()}
+        >
           ›
         </button>
       </div>
