@@ -665,6 +665,35 @@ ul li a {
 .slick-dots {
 	margin-top: 20px !important;
 }
+/* Fix card style on mobile */
+@media (max-width: 768px) {
+  .service-card {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 16px;
+  }
+
+  .card-image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Reduce text padding */
+  .card-content {
+    padding: 12px 14px;
+  }
+
+  /* Fix slick center padding issue */
+  .slick-list {
+    padding: 0 15px !important;
+  }
+}
+
+/* Fix dots overlapping on mobile */
+.slick-dots {
+  bottom: -25px;
+}
 
 .carousel-controls {
 	display: flex;
@@ -823,10 +852,13 @@ ul li a {
 }
 
 .service-slide {
-	width: 100%;
+  max-width: 100%;
 	box-sizing: border-box;
 }
-
+.services .slick-slide {
+  padding: 0 8px;   /* reduce spacing */
+  box-sizing: border-box;
+}
 .card-cover {
 	padding-bottom: 20px;
 }
