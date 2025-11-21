@@ -430,6 +430,31 @@ footer ul li a {
 .services-header {
 	margin-bottom: 3rem;
 }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;                 /* balanced spacing */
+  max-width: 750px;          /* PERFECT width for 2 cards */
+  margin: 2rem auto 0;       /* center grid */
+}
+
+/* Slightly smaller screens */
+@media (max-width: 1024px) {
+  .services-grid {
+    max-width: 650px;        /* slightly reduce width on medium screens */
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile: 1 per row */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;         
+    gap: 1.2rem;
+  }
+}
+
 
 .services-subtitle {
 	font-size: 20px;
