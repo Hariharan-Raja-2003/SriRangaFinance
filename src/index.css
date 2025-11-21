@@ -786,6 +786,48 @@ ul li a {
   margin: 0 10px;
   transition: 0.3s;
 }
+/* Fix slick slider card width on small screens */
+.service-slide {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 100% !important;
+  max-width: 320px;     /* prevents the card from becoming too wide */
+  margin: auto;
+}
+
+/* Ensure image fits perfectly */
+.card-image-wrapper {
+  width: 100%;
+  height: 180px; 
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+  .slick-slide {
+    width: 100% !important;
+  }
+  .slick-list {
+    padding: 0 10px !important;
+  }
+}
+.service-slide {
+  padding: 10px;
+}
+
+.card-cover {
+  padding-bottom: 20px;
+}
 
 .carousel-btn:hover {
   transform: scale(1.1);
