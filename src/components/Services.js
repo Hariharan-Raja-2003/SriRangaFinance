@@ -25,19 +25,19 @@ function Services() {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1
-        }
+          slidesToScroll: 1,
+        },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          centerMode: true,        // Fixes mobile layout
-          centerPadding: "20px"    // Adds space so card is not cut
-        }
-      }
-    ]
+          centerMode: true,
+          centerPadding: "25px", // FIXED for your images
+        },
+      },
+    ],
   };
 
   const services = [
@@ -86,6 +86,7 @@ function Services() {
         </Slider>
       </div>
 
+      {/* CUSTOM CONTROLS */}
       <div className="carousel-controls">
         <button
           className="carousel-btn prev"
@@ -93,6 +94,7 @@ function Services() {
         >
           ‹
         </button>
+
         <button
           className="carousel-btn next"
           onClick={() => sliderRef.current?.slickNext()}
