@@ -5,18 +5,19 @@ function Card({ title, img, text }) {
   };
 
   return (
-    <div className="card-container">
+    <div className="card service-card">
       <div className="card-image-wrapper">
         <img
           src={img}
           alt={title}
+          className="card-image"
           loading="lazy"
           onError={handleImageError}
         />
       </div>
 
       <div className="card-content">
-        <h3 className="card-title">{title}</h3>
+        <h3 className="card-title text-center">{title}</h3>
         <p className="card-text">{text}</p>
       </div>
     </div>
