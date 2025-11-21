@@ -621,6 +621,196 @@ ul li a {
   padding: 10px;
   box-sizing: border-box;
 }
+/* ------------ SERVICES SECTION ------------- */
+
+.services {
+  padding: 4rem 0;
+  background: #fff;
+}
+
+.services-header {
+  margin-bottom: 2.5rem;
+}
+
+.services-subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Slider Wrapper */
+.card-cover {
+  padding: 1rem 0;
+  width: 100%;
+}
+
+/* Slider Slide */
+.service-slide {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Card */
+.service-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  padding-bottom: 20px;
+  height: 100%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(1,191,113,0.25);
+}
+
+/* Card Image */
+.card-image-wrapper {
+  width: 100%;
+  height: 220px;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.35s ease;
+}
+
+.service-card:hover .card-image {
+  transform: scale(1.1);
+}
+
+/* Card Text */
+.card-content {
+  padding: 18px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a5f3f;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* ------------ CAROUSEL BUTTONS ------------ */
+
+.carousel-controls {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.carousel-btn {
+  background: linear-gradient(135deg, #01bf71, #1a5f3f);
+  color: #fff;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 26px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.carousel-btn:hover {
+  transform: scale(1.15);
+}
+
+/* Slick Dots */
+.slick-dots {
+  margin-top: 30px !important;
+}
+
+.slick-dots li button:before {
+  color: #01bf71 !important;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+}
+
+/* -------- RESPONSIVE FIXES -------- */
+
+@media (max-width: 992px) {
+  .card-image-wrapper {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slick-slide {
+    width: 100% !important;
+  }
+
+  .slick-list {
+    padding: 0 12px !important;
+  }
+
+  .card-image-wrapper {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-image-wrapper {
+    height: 150px;
+  }
+
+  .card-title {
+    font-size: 17px;
+  }
+}
+
+
+/* ------------ ABOUT SECTION (FIXED GAP + IMAGE SIZE) ------------ */
+
+.about {
+  padding: 4rem 0;
+  background: #fff;
+  margin-bottom: 4rem; /* FIXED: Reduced huge gap */
+}
+
+.about-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  padding: 1rem;
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 576px) {
+  .about-image img {
+    max-width: 270px;
+  }
+}
+
 
 /* Fix for card responsiveness */
 .card {
