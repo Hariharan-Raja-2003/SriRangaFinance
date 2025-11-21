@@ -439,6 +439,107 @@ footer ul li a {
   font-weight: 700;
   margin-bottom: 1rem;
 }
+/* Wrapper fix */
+.services {
+  padding: 40px 0;
+}
+
+/* Card wrapper inside slider */
+.service-slide {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Fix for card responsiveness */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image-wrapper {
+  width: 100%;
+  height: 200px;       /* Fixed height for uniform cards */
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Prevent stretching */
+}
+
+.card-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Slider dots spacing */
+.slick-dots {
+  margin-top: 20px !important;
+}
+
+/* Buttons for slider */
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.carousel-btn {
+  background: #01bf71;
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+/* --- RESPONSIVE FIXES --- */
+
+/* Tablet: 2 cards */
+@media (max-width: 992px) {
+  .card-image-wrapper {
+    height: 180px;
+  }
+}
+
+/* Mobile: 1 card full width */
+@media (max-width: 768px) {
+  .service-slide {
+    padding: 5px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .card-image-wrapper {
+    height: 160px;
+  }
+}
+
+/* Small mobile (<480px) */
+@media (max-width: 480px) {
+  .card-image-wrapper {
+    height: 140px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .card-text {
+    font-size: 14px;
+  }
+}
 
 .p-3 {
   padding: 0.2rem 1.5rem;
