@@ -416,11 +416,12 @@ footer ul li a {
 
 .card-cover {
   padding: 2rem 0;
+  padding-bottom: 20px;
   position: relative;
 }
 
 .service-slide {
-  padding: 0 15px;
+  padding: 10px;
 }
 
 .card-title {
